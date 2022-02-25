@@ -2,18 +2,17 @@
 title: Random hex color code
 tags: math,random,beginner
 firstSeen: 2017-12-24T14:39:21+02:00
-lastUpdated: 2021-01-08T00:23:44+02:00
+lastUpdated: 2022-02-25T07:05:18.397Z
 ---
 
 Generates a random hexadecimal color code.
 
 - Use `Math.random()` to generate a random 24-bit (6 * 4bits) hexadecimal number.
-- Use bit shifting and then convert it to an hexadecimal string using `Number.prototype.toString()`.
+- Convert it to a hexadecimal string and get rid of the leading '0.'.
 
 ```js
 const randomHexColorCode = () => {
-  let n = (Math.random() * 0xfffff * 1000000).toString(16);
-  return '#' + n.slice(0, 6);
+  return '#' + Math.random().toString(16).slice(2, 8);
 };
 ```
 

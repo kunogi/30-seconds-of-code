@@ -2,8 +2,8 @@
 title: Resolve promise after given amount of time
 tags: function,promise
 expertise: intermediate
-author: chalarangelo
-firstSeen: 2022-01-08T05:00:00-04:00
+author: Kunogi
+firstSeen: 2022-04-01T05:00:00-04:00
 ---
 
 Creates a promise that resolves after a given amount of time to the provided value.
@@ -14,7 +14,7 @@ Creates a promise that resolves after a given amount of time to the provided val
 ```js
 const resolveAfter = (value, delay) =>
   new Promise(resolve => {
-    setTimeout(() => resolve(value, delay));
+    setTimeout(() => resolve(value), delay);
   });
 ```
 
